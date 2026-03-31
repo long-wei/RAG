@@ -1,0 +1,28 @@
+# 项目依赖文件
+# 核心依赖
+torch>=1.9.0
+transformers>=4.20.0
+faiss-cpu>=1.7.0
+numpy>=1.21.0
+scikit-learn>=1.0.0
+
+# GUI界面
+pyttsx3>=2.90
+vosk>=0.3.31
+PyAudio>=0.2.11
+
+# Web框架
+Flask>=2.0.0
+
+# PDF处理
+PyMuPDF>=1.19.0
+
+# 评估指标
+rouge-score>=0.1.2
+nltk>=3.6.0
+
+# API调用
+openai>=1.0.0
+
+# 其他工具
+tqdm>=4.62.0
