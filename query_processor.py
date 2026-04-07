@@ -142,7 +142,7 @@ if __name__ == "__main__":
     # 加载模型（需先运行索引与模型加载模块）
     from index_loader import load_tech_model  # 假设索引与模型加载模块已实现
 
-    tokenizer, model = load_tech_model("models")
+    tokenizer, model = load_tech_model("paraphrase-multilingual-mpnet-base-v2")
 
     # 测试单条查询
     single_query = "Word2vec的CBOW和Skip-gram模型有什么区别？请用公式说明"
