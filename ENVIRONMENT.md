@@ -53,7 +53,7 @@ pip install PyAudio‑0.2.11‑cp39‑cp39‑win_amd64.whl
 
 ### 2. 语音识别模型
 
-系统使用浏览器内置的Web Speech API进行语音识别，无需额外配置本地模型。
+系统使用浏览器内置的Web Speech API进行语音识别，无需额外配置本地模型(GUI需要，web不需要)。
 
 注意：语音识别功能需要满足以下条件：
 1. 使用支持Web Speech API的浏览器（推荐Chrome）
