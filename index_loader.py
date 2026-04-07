@@ -6,7 +6,7 @@ import torch
 from typing import List, Dict, Tuple
 
 
-def load_tech_model(model_name_or_path: str = "models") -> Tuple[AutoTokenizer, AutoModel]:
+def load_tech_model(model_name_or_path: str = "paraphrase-multilingual-mpnet-base-v2") -> Tuple[AutoTokenizer, AutoModel]:
     """
     加载技术文档的预训练向量模型和Tokenizer
 
@@ -92,7 +92,7 @@ def load_faiss_index_and_metadata(
 
 
 def load_all_components(
-        model_path: str = "models",
+        model_path: str = "paraphrase-multilingual-mpnet-base-v2",
         index_path: str = "tech_doc_index.index"
 ) -> Tuple[AutoTokenizer, AutoModel, faiss.Index, List[Dict]]:
     """
