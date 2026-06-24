@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+
+# IDE
+.idea/
+
+# Pytest
+.pytest_cache/
+
+# 运行时生成数据
+rag_feedback.jsonl
+tech_doc_index_metadata.jsonl
+tech_doc_index.index
+
+# 模型文件（需单独下载）
+paraphrase-multilingual-mpnet-base-v2/
+vosk-model-small-cn-0.22/
+
+# 数据处理中间产物
+data_prcessor/processed_pdfs/
+data_prcessor/standardized_texts/
+data_prcessor/semantic_chunks/
+data_prcessor/Dataset/

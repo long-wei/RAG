@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="chat-container">
+    <div class="chat-header">
+        <h1><i class="fas fa-robot"></i> 技术文档问答系统</h1>
+        <p class="mb-0">基于自然语言处理的技术文档智能问答平台</p>
+    </div>
+    
+    <div class="chat-main">
+        <div class="chat-messages-container">
+            <div class="chat-messages" id="chatMessages">
+                <div class="message system-message">
+                    <p class="mb-0">欢迎使用技术文档问答系统！请输入您的技术问题，我将为您提供专业的解答。</p>
+                </div>
+            </div>
+            
+            <div class="chat-input-area">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="userInput" placeholder="请输入您的技术问题...">
+                    <button class="btn btn-primary" type="button" id="sendButton">
+                        <i class="fas fa-paper-plane"></i> 发送
+                    </button>
+                </div>
+                <!-- 添加语音输入按钮 -->
+                <div class="mt-2">
+                    <button class="btn btn-info" type="button" id="voiceInputButton">
+                        <i class="fas fa-microphone"></i> 语音输入
+                    </button>
+                    <button class="btn btn-secondary" type="button" id="stopTTSButton">
+                        <i class="fas fa-stop"></i> 停止播放
+                    </button>
+                </div>
+                <div class="typing-indicator" id="typingIndicator">
+                    <div class="loading-spinner"></div>
+                    正在思考中...
+                </div>
+                
+                <div class="rating-section" id="ratingSection">
+                    <h4 class="rating-title">请对回答进行评分:</h4>
+                    <div class="rating-stars">
+                        <span class="star" data-rating="1">&#9733;</span>
+                        <span class="star" data-rating="2">&#9733;</span>
+                        <span class="star" data-rating="3">&#9733;</span>
+                        <span class="star" data-rating="4">&#9733;</span>
+                        <span class="star" data-rating="5">&#9733;</span>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-success" id="submitRating">提交评分</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="sources-panel">
+            <div class="sources-header">
+                <h3><i class="fas fa-book"></i> 相关文档</h3>
+            </div>
+            <div class="sources-list" id="sourcesList">
+                <p class="text-muted">相关文档将会在这里显示</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+{% endblock %}
